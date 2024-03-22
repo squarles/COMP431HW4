@@ -93,7 +93,7 @@ def data(x, socket):
     for path in paths:
         if path:
             try:
-                file_path = "/home/squarles/HW4/forward/" + path
+                file_path = re.split(r'Server.py$', sys.argv[0])[0] + "forward/" + path
                 file = open(file_path, 'a')
                 file.write(content)
                 file.close()
